@@ -8,19 +8,19 @@ export default class User extends React.Component {
     render () {
         return (
           <Query  
-            query={FETCH_USERS}  
+            query={FETCH_NOTES}  
           >  
             {
               ({data, error, loading }) => {
                 console.log(data)
-                if (loading) return ( <View><Text>LOADINGLOADING LOADING</Text></View>)
-                if (!data.users) return null;
+                if (loading) return ( <View><Text>LOADING</Text></View>)
+                if (!data.notes) return null;
                 return (
                   <View style={styles.main}>            
                     <FlatList
-                        data={data.users}
+                        data={data.notes}
                         keyExtractor={(item) => item.id}
-                        renderItem={({item}) => <Text>{item.name}</Text> }
+                        renderItem={({item}) => <Text>{item.text}</Text> }
                     />
               </View>  
                 )  
@@ -39,11 +39,11 @@ export default class User extends React.Component {
       alignItems: 'center',
     }})
 
-const FETCH_USERS = gql`
+const FETCH_NOTES = gql`
 query {
-    users {
+    notes {
         id
-        name
+        text
       }
     }
 `;
