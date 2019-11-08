@@ -34,7 +34,7 @@ render() {
                     })
                       .then(res => res)
                       .catch(err => <Text>{err}</Text>);
-                    this.setState({ Txt: "" });
+                    this.Txt= "" );
                   }}
                   title="Add Note"
                 />
