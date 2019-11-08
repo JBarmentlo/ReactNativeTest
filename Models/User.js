@@ -48,3 +48,33 @@ query {
     }
 `;
 
+/*
+mutation {
+    createNote( 
+      data: {
+          text: "a new note"
+      }) 
+  {
+      id
+      text
+    }
+  }
+*/
+
+
+
+
+/*
+  mutation ($text: String!){
+    insert_todos (
+      objects: [{
+        title: $text
+      }]
+    ){
+    returning {
+        id
+        text
+      }
+    }
+  }
+  */

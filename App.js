@@ -3,6 +3,7 @@ import { ApolloProvider} from 'react-apollo';
 import makeApolloClient from './apollo';
 import {View, Text} from 'react-native'
 import User from './Models/User'
+import CreateNote from './Models/AddButton'
 
 export default class App extends React.Component {
 
@@ -26,9 +27,10 @@ export default class App extends React.Component {
   }
   else
   {
+  console.log("apollo client")
    return (
     <ApolloProvider client={this.state.client}>
-        <User></User>
+        <CreateNote></CreateNote>
      </ApolloProvider>
    )
   }
