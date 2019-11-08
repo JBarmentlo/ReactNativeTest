@@ -1,9 +1,3 @@
-// npm install expo-cli
-// faire un compte sur prisma
-// expo init MyServerName
-
-//npm install --save apollo-client react-apollo apollo-cache-inmemory apollo-link-http graphql graphql-tag
-
 import React from 'react';
 import { ApolloProvider} from 'react-apollo';
 import makeApolloClient from './apollo';
@@ -33,7 +27,7 @@ export default class App extends React.Component {
   else
   {
    return (
-      <ApolloProvider client={this.state.client}>
+    <ApolloProvider client={this.state.client}>
         <User></User>
      </ApolloProvider>
    )
